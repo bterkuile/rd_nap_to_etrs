@@ -38,10 +38,11 @@ point.h   #=> 42.8614
 
 ## Command line
 There is also a command line tool for converting coordinates:
+(x, y, nap)
 ```bash
 rd_nap_to_etrs 117380.1200 575040.3400 1.0000
 ```
-will result in
+will result in (latitude, longitude, h):
 ```
 53.160753041771386 4.824761912426986 42.86140355819891
 ```
