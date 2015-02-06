@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name = 'rd_nap_to_etrs'
-  spec.version = '0.1'
+  spec.version = '0.2'
   spec.required_ruby_version = '~> 2.0'
   spec.summary = 'Convert RD/NAP coordinates to ETRS'
   spec.description = 'Convert RD/NAP coordinates to ETRS following the 2008 standards'

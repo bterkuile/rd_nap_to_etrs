@@ -10,7 +10,7 @@ Initialize like:
 
 ```ruby
 point = RdNapToEtrs::Point.new(x: 117380.1200, y: 575040.3400, nap: 1)
-batch =  RdNapToEtrs::Point.new
+batch =  RdNapToEtrs::Batch.new
 batch.trans2008 [point]
 
 # Now the lat, lng and h values of the point are set
