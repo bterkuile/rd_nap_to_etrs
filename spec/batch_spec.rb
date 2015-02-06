@@ -40,7 +40,6 @@ RSpec.describe RdNapToEtrs::Batch do
 
 
   describe "Valid point" do
-    let(:point){ RdNapToEtrs::Point.new(x: 117380.1200, y: 575040.3400, nap: 1) }
     it "Converts the point and leaves the object as it is" do
       described_class.new.trans2008 points
       points.each.with_index do |point, i|
@@ -51,8 +50,14 @@ RSpec.describe RdNapToEtrs::Batch do
     end
 
     it "does not raise when nap is not set" do
-      point.nap = nil
+      point = RdNapToEtrs::Point.new x: 117380.1200, y: 575040.3400, nap: nil
       expect{ described_class.new.trans2008 [point] }.not_to raise_error
+    end
+
+    it 'works when the nap value is set as Fixnum' do
+     point = RdNapToEtrs::Point.new x: 117380.1200, y: 575040.3400, nap: 1
+     described_class.new.trans2008 [point]
+     point.h.should be_within( 1e-3 ).of( 42.8614 ) # would be 41.8614 withoud nap 1
     end
   end
 end

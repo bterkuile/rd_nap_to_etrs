@@ -1496,7 +1496,7 @@ extern "C" VALUE r_transpoint2008(VALUE point){
   }else{
     rb_raise(rb_eArgError, "The y value of point is not a number");
   }
-  if(TYPE(rb_nap) == T_FLOAT or TYPE(rb_y_rd) == T_FIXNUM or TYPE(rb_y_rd) == T_BIGNUM){
+  if(TYPE(rb_nap) == T_FLOAT or TYPE(rb_nap) == T_FIXNUM or TYPE(rb_nap) == T_BIGNUM){
     nap  = NUM2DBL(rb_nap);
   }else{
     //rb_raise(rb_eArgError, "The nap value of point is not a number");
