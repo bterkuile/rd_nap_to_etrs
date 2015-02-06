@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+# Transform x and y coordinates to latitude and longitude
+# usage:
+#   rd_nap_to_etrs 117380.1200 575040.3400 1
+# will result in:
+#   53.16075304161444 4.82476191243292
+require 'rd_nap_to_etrs'
+if $*.size > 1
+  point = RdNapToEtrs::Point.new x: $*[0].to_f, y: $*[1].to_f, nap: $*[2].to_f
+  batch = RdNapToEtrs::Batch.new
+  batch.trans2008 [point]
+
+  puts [point.lat, point.lng, point.h].join(' ')
+else
+  raise "Please specify the RD x and y and possible nap values in that order respectively as arguments"
+end
