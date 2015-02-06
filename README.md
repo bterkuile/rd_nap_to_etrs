@@ -4,6 +4,22 @@ RdNapToEtrs
 This gem converts points in the RD/NAP 2008 format to ETRS89. It handles
 batches of points. 
 
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'rd_nap_to_etrs'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install rd_nap_to_etrs
+
 ## Use inside your ruby program
 
 Initialize like:
