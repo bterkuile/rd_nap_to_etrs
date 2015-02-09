@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir['lib/**/*.rb'] + Dir['bin/*'] + Dir['ext/**/*.so'] + Dir['ext/**/*.dll'] + Dir['ext/**/*.bundle']  + Dir['ext/**/*.grd']
   #spec.platform = Gem::Platform::CURRENT
   spec.require_paths = [ 'lib', 'ext' ]
+  spec.extensions << 'ext/rd_nap_to_etrs/extconf.rb'
 
   spec.add_development_dependency "rspec", "~> 3.1"
 end
