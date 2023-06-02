@@ -6,7 +6,7 @@ require 'rd_nap_to_etrs/version'
 Gem::Specification.new do |spec|
   spec.name = 'rd_nap_to_etrs'
   spec.version = RdNapToEtrs::VERSION
-  spec.required_ruby_version = '~> 2.0'
+  spec.required_ruby_version = '>= 2.0'
   spec.summary = 'Convert RD/NAP coordinates to ETRS'
   spec.description = 'Convert RD/NAP coordinates to ETRS following the 2008 standards'
   spec.email = 'bterkuile@gmail.com'
@@ -19,5 +19,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = [ 'lib', 'ext' ]
   spec.extensions << 'ext/rd_nap_to_etrs/extconf.rb'
 
-  spec.add_development_dependency "rspec", "~> 3.1"
+  spec.add_development_dependency "rspec", ">= 3.1"
 end
