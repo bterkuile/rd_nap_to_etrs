@@ -1,6 +1,10 @@
 CHANGELOG
 ===========
 
+2023-06-02 - v0.5.2
+--------------------
+* Include the source cpp in the spec definition
+
 2023-06-02 - v0.5.1
 --------------------
 * Version upgrade to avoid non checked-in collission
